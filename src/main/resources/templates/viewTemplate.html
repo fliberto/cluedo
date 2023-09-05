@@ -14,21 +14,72 @@
         <thead>
         <tr>
             <th>Name</th>
-            <th>Hair color</th>
             <th>Age</th>
             <th>Height</th>
+            <th>Hair color</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="person : ${people}">
             <td th:text="${person.getName()}"></td>
-            <td th:text="${person.getHairColor()}"></td>
             <td th:text="${person.getAge()}"></td>
             <td th:text="${person.getHeight()}"></td>
+            <td th:text="${person.getHairColor()}"></td>
         </tr>
         </tbody>
     </table>
 </section>
 
+<section>
+    <header>
+        <h1>Weapon</h1>
+    </header>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Material</th>
+            <th>Length</th>
+            <th>Weight</th>
+            <th>Color</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="weapon : ${weapons}">
+            <td th:text="${weapon.getName()}"></td>
+            <td th:text="${weapon.getMaterial()}"></td>
+            <td th:text="${weapon.getLength()}"></td>
+            <td th:text="${weapon.getWeight()}"></td>
+            <td th:text="${weapon.getColor()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <header>
+        <h1>Room</h1>
+    </header>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Amount of Doors</th>
+            <th>Amount of Windows</th>
+            <th>Wallcolor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="room : ${rooms}">
+            <td th:text="${room.getName()}"></td>
+            <td th:text="${room.getSize()}"></td>
+            <td th:text="${room.getAmountDoors()}"></td>
+            <td th:text="${room.getAmountWindows()}"></td>
+            <td th:text="${room.getWallColor()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 </body>
 </html>
